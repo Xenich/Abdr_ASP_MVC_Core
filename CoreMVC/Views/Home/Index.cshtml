@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Выбор товара";
+}
+
+<div>
+    <h3>Форма выбора товара</h3>
+    <form action="Home/productChoosed" method="GET">
+        <table>
+            <tr>
+                <td><p>Введите название товара</p></td>
+                <td><input type="text" name="product" /> </td>      @*в контроллере Home/Index есть метод  public string Index(string product), который принимает post-запрос *@
+            </tr>
+            
+            <tr>
+                <td><input type="submit" name="Отправить" /> </td>
+            </tr>
+        </table>
+    </form>
+</div>

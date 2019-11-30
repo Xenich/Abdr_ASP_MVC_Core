@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = ViewData["ProductName"];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/AddProduct.js"></script>
+    <title>Наименование товара</title>
+</head>
+<body>
+
+    <!-- <form action="Addproduct" method="Post">-->
+    <h4>Без проверки ввода в поля</h4>
+    <div id="ProviderName">Наименование поставщика</div>
+    <div id="warehouse">
+        <div class="links" id="left">
+            Склад 1
+        </div>
+        <div id="right">
+            <ul class="links">
+                <li class="rightLink"><a href="/stop">Приостановить</a></li>
+                <li class="rightLink"><a href="/addWarehouse">Добавить склад</a></li>
+                <li class="rightLink"><a href="/delete">Удалить</a></li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div class="info">
+        <label for="warehouseName">Наименование склада</label><br>
+        <input type="text" class="full" readonly="readonly" value="@ViewData["wareHouseName"]"><br>
+        <label for="warehouseAddress">Aдрес склада</label><br>
+        <input type="text" class="full" readonly="readonly" value="@ViewData["wareHouseAddress"]"><br>
+
+        <label for="availability">В наличии на складе</label><br>
+        <div class="container">
+            <div class="inlineBlocks">
+                <input type="number" min=0 required name="availability" id="availability">
+            </div>
+            <div class="inlineBlocks">
+                <input type="checkbox" name="Self" id="self">
+                <label for="self">Самовывоз</label>
+            </div>
+            <div class="inlineBlocks">
+                <input type="checkbox" name="byCity" id="byCity">
+                <label for="byCity">Доставка по городу</label>
+            </div>
+            <div class="inlineBlocks">
+                <input type="checkbox" name="regions" id="regions">
+                <label for="regions">Доставка в другие регионы</label><br>
+            </div>
+        </div>
+
+        <label for="price">Цена товара</label><br>
+        <input type="number" class="full" min=0 step="any" required name="price" id="price"><br>
+        <label>Специальные цены</label><br>
+        <div id="spetialPrices">
+            <script type="text/javascript">clickplus();</script>
+        </div>
+    </div>
+    <input type="submit" onclick="sendPost()" name="Отправить" />
+    <!-- <input type="submit" name="Отправить" />  -->
+    <hr class="info" size="2" color="#000000" align="left" />
+    <!--</form>  -->
+</body>
+        </html>

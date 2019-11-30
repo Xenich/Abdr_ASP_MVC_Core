@@ -1,0 +1,116 @@
+html, body
+{
+	margin-top:10px;
+	padding:0; 
+}
+
+#ProviderName
+{
+	margin-left: 5%;
+	margin-bottom: 15px;
+}
+#warehouse
+{
+width: 80%;
+max-width: 1024px;
+margin-left: 1%;
+}
+
+#warehouse #left{
+	float:left;
+}
+#warehouse #right{
+text-align: right;
+}
+
+.links li{
+	display:inline-block;
+	margin-left: 10px;
+}
+
+.links li a{
+	color: black;
+}
+
+.info{
+	margin-left: 25px;
+}
+
+input{
+	background-color: rgb(71, 187, 253);
+	margin-bottom: 10px;
+	outline: none;
+	padding: 8px;
+	color: #ffffff;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.info input.full{
+	width: 80%;
+	max-width: 1024px;
+}
+
+.inlineBlocks {
+	display: inline-block;
+}
+
+
+#availability{
+	width: 20%;
+	min-width: 100px;
+	max-width: 200;
+}
+
+.container{
+	width: 80%;
+	max-width: 1024px;
+}
+.container1, .container2, .container3{
+	width: 80%;
+	max-width: 1024px;
+	margin-bottom: 40px;
+}
+
+.info label{
+margin-right: 5px;
+}
+#spetialPrices{
+	margin-left: 30px;
+	width: 80%;
+   max-width: 994px;
+}
+#spetialPrices input{
+width: 10%;
+min-width: 50px;
+}
+
+.plusminus{
+	margin-left: 15px;
+	font-size: xx-large;
+}
+
+
+@media screen and (max-width: 600px)
+{
+.rightLink, .inlineBlocks {
+    display: table;
+	 width: 100%;
+	 text-align: left;
+}}
+
+@media screen and (max-width:300px) {
+	html {
+		font-size: 25px ;
+		}
+		.container{
+			display: box;
+		}
+	}
+
+@media screen and (min-width:300px)and (max-width:600px) {
+	html {
+		font-size: 20px ;
+		}}
+
+
